@@ -1,0 +1,28 @@
+body {
+    background-color: aqua;
+    height: 100vmin !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.card {
+    background-color: black;
+    height: 40vmin !important;
+    width: 110%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px;
+}
+
+/* git init
+>> git add .
+>> git commit -m "first commit"
+>> git branch -M FrontEnd
+>> git remote add origin https://github.com/AshokGfsd/password-reset.git
+>> git push -u origin FrontEnd */
