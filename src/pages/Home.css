@@ -20,9 +20,8 @@ body {
     box-shadow: 4px 4px 6px;
 }
 
-/* git init
->> git add .
->> git commit -m "first commit"
->> git branch -M FrontEnd
->> git remote add origin https://github.com/AshokGfsd/password-reset.git
->> git push -u origin FrontEnd */
+
+.icon{
+    
+    font-size: x-large;
+}

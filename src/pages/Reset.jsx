@@ -31,7 +31,10 @@ const validate = (values) => {
 
 const Reset = () => {
   const { key } = useParams();
-
+  const [visibility, setVisibility] = useState({
+    password: false,
+    confirmPassword: false,
+  });
   const style = {
     color: "red",
     fontWeight: "italic",
@@ -70,25 +73,50 @@ const Reset = () => {
             <h1>New Password</h1>
             <div>
               <input
-                type="password"
+                type={visibility.password ? "text" : "password"}
                 placeholder="Please Enter Your Register password..."
                 name="password"
                 id="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
               />
+              &nbsp;&nbsp;&nbsp;
+              <span
+                className="icon"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setVisibility({
+                    password: !visibility.password,
+                    confirmPassword: visibility.confirmPassword,
+                  });
+                }}
+              >
+                {visibility.password ? "🙉" : "🙈"}
+              </span>
             </div>
             <div style={style}>{formik.errors.password}</div>
             <h1>Confirm Password</h1>
             <div>
               <input
-                type="password"
+                type={visibility.confirmPassword ? "text" : "password"}
                 placeholder="Please Enter Your Register password..."
                 name="confirmPassword"
                 id="confirmPassword"
                 value={formik.values.confirmPassword}
                 onChange={formik.handleChange}
               />
+              <span
+                className="icon"
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setVisibility({
+                    confirmPassword: !visibility.confirmPassword,
+                    password: visibility.password,
+                  });
+                }}
+              >
+                {visibility.confirmPassword ? "🙉" : "🙈"}
+              </span>
             </div>
             <div style={style}>{formik.errors.confirmPassword}</div>
             <button type="submit" className="btn btn-primary">
