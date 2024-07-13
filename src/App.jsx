@@ -6,10 +6,30 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Verify from "./pages/Verify";
 import Reset from "./pages/Reset";
+import Login from "./pages/Login";
+import Sign from "./pages/Sign";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: (
+      <div>
+        <Login />
+        <ToastContainer id="toast" />
+      </div>
+    ),
+  },
+  {
+    path: "/signin",
+    element: (
+      <div>
+        <Sign />
+        <ToastContainer id="toast" />
+      </div>
+    ),
+  },
+  {
+    path: "/forgot",
     element: (
       <div>
         <Home />

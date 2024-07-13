@@ -58,7 +58,6 @@ const Reset = () => {
           values.confirmPassword = "";
         })
         .catch((e) => {
-          console.log(e);
           const message = e.response.data.message;
           toast.dismiss();
           return toast.error(message);
@@ -67,8 +66,8 @@ const Reset = () => {
   });
   return (
     <div>
-      <div className="container">
-        <div>
+      <div >
+        <center>
           <form className="card" onSubmit={formik.handleSubmit}>
             <h1>New Password</h1>
             <div>
@@ -123,7 +122,7 @@ const Reset = () => {
               SUBMIT
             </button>
           </form>
-        </div>
+        </center>
       </div>
     </div>
   );

@@ -2,15 +2,12 @@ body {
     background-color: aqua;
     height: 100vmin !important;
     width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center;
 }
 
 .card {
     background-color: black;
     height: 40vmin !important;
-    width: 110%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
