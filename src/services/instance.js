@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = " http://127.0.0.1:4444";
+const baseURL = "https://password-rest-be-zm5k.onrender.com";
 
 const instance = axios.create({
   baseURL,
