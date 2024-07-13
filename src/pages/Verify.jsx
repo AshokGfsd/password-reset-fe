@@ -16,7 +16,6 @@ const Verify = () => {
     userServices
       .verify(key)
       .then((response) => {
-        console.log(response.data)
         const message = response.data.message;
         setLoader(false);
         setState(message);
@@ -44,10 +43,10 @@ const Verify = () => {
       });
   }, []);
   return (
-    <div>
+    <center>
       <h1>{state}</h1>
       {loader && <div className="loader"></div>}
-    </div>
+    </center>
   );
 };
 

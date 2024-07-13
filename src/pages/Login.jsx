@@ -38,10 +38,9 @@ const Login = () => {
           navigate("/");
         })
         .catch((e) => {
-          console.log(e)
-          // const message = e.response.data.message;
+          const message = e.response.data.message;
           toast.dismiss();
-          // return toast.error(message);
+          return toast.error(message);
         });
     },
   });
@@ -52,7 +51,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="container">
+      <center className="container">
         <div className="card3">
           <form onSubmit={formik.handleSubmit}>
             <div >
@@ -107,7 +106,7 @@ const Login = () => {
             </div>
           </form>
         </div>
-      </div>
+      </center>
     </div>
   );
 };

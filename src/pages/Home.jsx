@@ -45,7 +45,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <center>
       <div className="container">
         <div>
           <form className="card" onSubmit={formik.handleSubmit}>
@@ -67,7 +67,7 @@ const Home = () => {
           </form>
         </div>
       </div>
-    </div>
+    </center>
   );
 };
 
